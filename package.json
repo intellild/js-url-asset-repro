@@ -1,0 +1,17 @@
+{
+  "name": "js-url-asset-repro",
+  "private": true,
+  "scripts": {
+    "rspack": "BUNDLER=rspack JS_AUTO=1 rspack build --config webpack.config.cjs && node dist/rspack/with-rule/bundle.cjs",
+    "rspack:baseline": "BUNDLER=rspack JS_AUTO=0 rspack build --config webpack.config.cjs && node dist/rspack/baseline/bundle.cjs",
+    "webpack": "JS_AUTO=1 webpack && node dist/webpack/with-rule/bundle.cjs",
+    "webpack:baseline": "JS_AUTO=0 webpack && node dist/webpack/baseline/bundle.cjs"
+  },
+  "devDependencies": {
+    "@rspack/cli": "2.3.2",
+    "@rspack/core": "2.3.2",
+    "webpack": "5.112.2",
+    "webpack-cli": "7.3.1"
+  },
+  "packageManager": "pnpm@10.34.4"
+}
